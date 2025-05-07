@@ -1,0 +1,9 @@
+{
+  "cSpell.words": [
+    "Taskr"
+  ],
+  "eslint.useFlatConfig": true,
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+}
