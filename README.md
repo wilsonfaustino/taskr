@@ -27,6 +27,14 @@ npm install
 pnpm install
 ```
 
+Rodar em modo de desenvolvimento:
+```bash
+npm run dev 
+# ou 
+pnpm dev
+```
+
+
 ---
 
 **Status do projeto:** Em desenvolvimento
