@@ -1,9 +1,7 @@
 'use client'
 
-import { useState } from 'react'
 import { Header } from './header'
 import { TodoList } from './todo-list'
-import { Todo } from '@/core/@types'
 import { useTasks } from '@/hooks/use-tasks'
 
 export function Tasks() {
