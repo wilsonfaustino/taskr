@@ -17,7 +17,7 @@ Nosso objetivo é demonstrar a construção de um sistema completo, funcional e 
 ---
 ## Como rodar
 
-Instale as dependência usando 
+Instale as dependências usando 
 
 ```bash
 npm install
