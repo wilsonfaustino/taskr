@@ -15,6 +15,19 @@ Nosso objetivo é demonstrar a construção de um sistema completo, funcional e 
 - Estrutura de código escalável para futuras melhorias.
 
 ---
+## Como rodar
+
+Instale as dependência usando 
+
+```bash
+npm install
+
+# ou 
+
+pnpm install
+```
+
+---
 
 **Status do projeto:** Em desenvolvimento
 
