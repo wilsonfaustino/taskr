@@ -22,7 +22,9 @@ export function useTasks() {
         completed: false,
       }
       setTodos((prev) => [...prev, newTodo])
-      console.log('New Todo:', newTodo)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('New Todo:', newTodo)
+      }
     }
 
     setInput('')
