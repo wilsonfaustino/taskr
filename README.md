@@ -1,23 +1,37 @@
 # 🧠 Taskr
 
-**Iteração 2** Uma nova rodada de desenvolvimento.
-
-**Taskr** é uma aplicação web simples e eficiente voltada para gerenciamento de tarefas, criada como parte de um projeto acadêmico no curso de Análise e Desenvolvimento de Sistemas.
-
-Este repositório serve como base para o desenvolvimento do projeto final, utilizando como ponto de partida uma prova de conceito (PoC) funcional, originalmente construída por um colaborador da equipe. A partir desse ponto, evoluiremos a aplicação com melhorias na experiência do usuário, estrutura de código e práticas modernas de desenvolvimento.
-
-Nosso objetivo é demonstrar a construção de um sistema completo, funcional e adaptado às necessidades reais de organização pessoal ou em equipe.
-
-## 💡 Visão inicial
-
-- Organização de tarefas de forma prática e intuitiva.
-- Interface responsiva e adaptada a diferentes dispositivos.
-- Estrutura de código escalável para futuras melhorias.
+**Taskr** é uma aplicação web para gerenciamento de tarefas, desenvolvida como parte do projeto integrador do curso de Análise e Desenvolvimento de Sistemas.
 
 ---
-## Como rodar
 
-Instale as dependências usando 
+## 🚀 Iteração 2 — Funcionalidade + Contexto + Persistência
+
+Esta iteração amplia a PoC inicial, adicionando autenticação simulada e salvamento de tarefas por usuário no `localStorage`, tudo com um código limpo, componentizado e responsivo.
+
+### Principais recursos implementados:
+
+- 📧 Login simulando múltiplos usuários com email único
+- 📦 Persistência automática das tarefas via `localStorage`
+- 🧠 Contexto global de autenticação com `Context API`
+- 📋 Gerenciamento de tarefas com `adicionar`, `editar`, `excluir`
+- 💅 Interface estilizada com Tailwind CSS 4
+- ⚙️ Separação clara entre componentes de interface e lógica de domínio
+
+---
+
+## 🧩 Componentes principais
+
+- `AuthProvider`: fornece contexto global de autenticação
+- `LoginScreen`: tela de login simples via email
+- `TasksClient`: gerencia lógica da aplicação e renderiza tarefas
+- `Header`: input e botão de ação (criar/editar)
+- `TodoList`: renderiza tarefas e ações (editar/deletar)
+
+---
+
+## 📦 Como rodar localmente
+
+### 1. Instale as dependências
 
 ```bash
 npm install
@@ -34,10 +48,31 @@ npm run dev
 pnpm dev
 ```
 
+A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
+
+## 📁 Estrutura esperada no localStorage
+
+```json
+{
+  "taskr:email": "usuario@email.com",
+  "taskr:todos-usuario@email.com": [
+    { "id": "1", "title": "Estudar React", "done": false },
+    ...
+  ]
+}
+```
+
+## 🧪 Testado em:
+
+* Navegadores: Chrome, Firefox
+* Ferramentas: DevTools, Armazenamento Local
+* Sem dependências externas para backend
 
 ---
 
-**Status do projeto:** Em desenvolvimento
+## 🏗️ Status do projeto
+
+Iteração 2 - Concluída - O projeto segue em evolução
 
 ---
 
