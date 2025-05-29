@@ -14,3 +14,7 @@ export const todoSchema = z.object({
     .optional(),
   userId: z.string().uuid(),
 })
+
+export const loginSchema = z.string().trim().toLowerCase().email({
+  message: 'Email inválido',
+})
