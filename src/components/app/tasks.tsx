@@ -13,10 +13,8 @@ export function Tasks() {
         value={input}
         change={(e) => setInput(e.target.value)}
         onSubmit={handleSubmit}
-        onInvalid={(e) => e.preventDefault()}
         edit={edit}
         tasks={todos}
-        loading={false}
       />
       <TodoList todos={todos} onEdit={handleEdit} onComplete={handleComplete} onDelete={handleDelete} />
     </main>
