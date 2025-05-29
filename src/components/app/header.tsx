@@ -3,7 +3,6 @@ import { ChangeEventHandler, FormEventHandler } from 'react'
 import { CircleCheck, CirclePlus } from 'lucide-react'
 import { Todo } from '@/core/@types'
 import Image from 'next/image'
-import { useAuth } from '@/hooks/use-auth'
 import { Logout } from './logout'
 
 interface HeaderProps {
@@ -11,12 +10,9 @@ interface HeaderProps {
   value: string
   onSubmit: FormEventHandler<HTMLFormElement>
   edit?: Todo
-  tasks: Todo[]
 }
 
 export function Header({ change, value, onSubmit, edit }: HeaderProps) {
-  const { email } = useAuth()
-
   return (
     <header className="w-full bg-gray-900 py-6 px-4 flex flex-col justify-center border-b border-gray-800">
       <div className="w-full flex flex-col">
