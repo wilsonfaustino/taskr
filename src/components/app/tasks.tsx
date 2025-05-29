@@ -9,13 +9,7 @@ export function Tasks() {
 
   return (
     <main className="min-h-screen bg-gray-950 text-white">
-      <Header
-        value={input}
-        change={(e) => setInput(e.target.value)}
-        onSubmit={handleSubmit}
-        edit={edit}
-        tasks={todos}
-      />
+      <Header value={input} change={(e) => setInput(e.target.value)} onSubmit={handleSubmit} edit={edit} />
       <TodoList todos={todos} onEdit={handleEdit} onComplete={handleComplete} onDelete={handleDelete} />
     </main>
   )
