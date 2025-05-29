@@ -1,5 +1,6 @@
 import { Todo } from '@/core/@types'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useAuth } from './use-auth'
 
 const userID = 'user123'
 
@@ -7,6 +8,22 @@ export function useTasks() {
   const [todos, setTodos] = useState<Todo[]>([])
   const [input, setInput] = useState('')
   const [edit, setEdit] = useState<Todo | undefined>(undefined)
+  const { email } = useAuth()
+
+  useEffect(() => {
+    if (email) {
+      const data = localStorage.getItem(`taskr:todos-${email}`)
+      if (data) {
+        setTodos(JSON.parse(data))
+      }
+    }
+  }, [email])
+
+  useEffect(() => {
+    if (email) {
+      localStorage.setItem(`taskr:todos-${email}`, JSON.stringify(todos))
+    }
+  }, [todos, email])
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
