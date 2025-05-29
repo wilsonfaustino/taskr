@@ -2,8 +2,6 @@ import { Todo } from '@/core/@types'
 import { useEffect, useState } from 'react'
 import { useAuth } from './use-auth'
 
-const userID = 'user123'
-
 export function useTasks() {
   const [todos, setTodos] = useState<Todo[]>([])
   const [input, setInput] = useState('')
@@ -27,13 +25,14 @@ export function useTasks() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    if (!email) return
 
     if (edit) {
       setTodos((prev) => prev.map((t) => (t.id === edit.id ? { ...t, title: input } : t)))
       setEdit(undefined)
     } else {
       const newTodo: Todo = {
-        userId: userID,
+        userId: email,
         id: Date.now().toString(),
         title: input,
         completed: false,
