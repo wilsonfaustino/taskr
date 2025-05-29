@@ -1,3 +1,4 @@
+
 # 🧠 Taskr
 
 **Taskr** é uma aplicação web para gerenciamento de tarefas, desenvolvida como parte do projeto integrador do curso de Análise e Desenvolvimento de Sistemas.
@@ -35,20 +36,21 @@ Esta iteração amplia a PoC inicial, adicionando autenticação simulada e salv
 
 ```bash
 npm install
-
-# ou 
-
+# ou
 pnpm install
 ```
 
-Rodar em modo de desenvolvimento:
+### 2. Rode o ambiente de desenvolvimento
+
 ```bash
-npm run dev 
-# ou 
+npm run dev
+# ou
 pnpm dev
 ```
 
-A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
+A aplicação estará disponível em `http://localhost:3000`.
+
+---
 
 ## 📁 Estrutura esperada no localStorage
 
@@ -62,18 +64,55 @@ A aplicação estará disponível em [http://localhost:3000](http://localhost:30
 }
 ```
 
-## 🧪 Testado em:
+---
 
-* Navegadores: Chrome, Firefox
-* Ferramentas: DevTools, Armazenamento Local
-* Sem dependências externas para backend
+## ✅ Testes E2E com Playwright
+
+O projeto conta com uma suíte completa de testes end-to-end utilizando o [Playwright](https://playwright.dev/), garantindo qualidade e confiabilidade na experiência do usuário.
+
+### 📋 O que é testado:
+
+- Login por email
+- Criação de tarefas
+- Edição de tarefas
+- Exclusão de tarefas
+- Logout
+
+### 🧪 Como executar os testes
+
+1. Instale os navegadores necessários:
+
+```bash
+pnpm dlx playwright install --with-deps
+```
+
+2. Rode os testes localmente:
+
+```bash
+pnpm tes:e2e
+```
+
+3. Abra o relatório HTML:
+
+```bash
+pnpm dlx playwright show-report
+```
+
+### 🎥 Evidências
+
+- Cada teste gera vídeos (`video.webm`) e screenshots automáticas (em falhas).
+- O relatório completo em HTML é salvo na pasta `playwright-report/`.
+- No CI (GitHub Actions), os relatórios e vídeos são anexados como artefatos de build.
+
+> Playwright está configurado para rodar automaticamente em cada push ou pull request via GitHub Actions.
 
 ---
 
 ## 🏗️ Status do projeto
 
-Iteração 2 - Concluída - O projeto segue em evolução
+**Iteração 2 - Concluída**  
+O projeto segue pronto para evolução.
 
 ---
 
-> Este projeto foi desenvolvido como parte das atividades acadêmicas da disciplina de Projeto Integrador do curso de ADS.
+> Projeto acadêmico desenvolvido para o componente curricular de Projeto Integrador no curso de ADS.
