@@ -23,7 +23,7 @@ export function Logout() {
   }
 
   return (
-    <div className="flex items-center justify-between gap-4 mb-4 self-end">
+    <div className="flex items-center justify-between gap-4 mb-4 self-end" data-testid="logout-component">
       <span>{email}</span>
       <AlertDialog>
         <AlertDialogTrigger asChild>
